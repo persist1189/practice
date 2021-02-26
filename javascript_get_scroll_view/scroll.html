@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        height:2000px
+    }
+    #box {
+        background-color: blue;
+        width: 200px;
+        height: 260px;
+        overflow: auto;
+    }
+    #box2{
+        width: 2000px;
+        height: 2600px;
+        background-color: red;
+        box-sizing: border-box;
+    }
+</style>
+<body class="body">
+    <div id="box">
+            <div id="box2"></div>
+    </div>
+</body>
+<script>
+    window.onload = f;  //頁面初始化時固定其位置
+    box.onscroll = f;  //當文件位置發生變化時重新固定其位置
+    function f(){
+        let box = document.getElementById('box');
+        console.log(`x:${box.scrollTop} y:${box.scrollLeft}`);
+    }
+</script>
+</html>
