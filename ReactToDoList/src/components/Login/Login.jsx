@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { useHistory } from "react-router-dom"
 import styles from "../../style/Login.scss"
 import axios from 'axios';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const InputForm = (props) => {
     const { id, type, title, value, inputRef, onChange, placeholder } = props
@@ -22,11 +23,36 @@ const InputBtn = (props) => {
     )
 }
 
+
+
 const Login = (props) => {
-    const [state, setState] = useState({ email: "", password: "" })
+    const [state, setState] = useState({ 
+        email: "", password: "" ,
+        googleName: '',
+        googleEmail: '',
+        googleFirstName: '',
+        googleSecondName: '',
+        googleId: '',
+        googleIcon: '',
+    })
+
+    const responseGoogle = (res) => {
+        let data = res.profileObj;
+        setState(prev => ({
+            ...prev,
+            googleName: data.name,
+            googleEmail: data.email,
+            googleFirstName: data.familyName,
+            googleSecondName: data.giveName,
+            googleId: data.googleId,
+            googleIcon: data.imageUrl,
+        }))
+    }
+
+
     const isDisabledBtn = () => {
-        return (
-            state.email.length == 0 || state.password.length == 0 ? true : false
+        return  (
+            state.email.length > 0 && state.password.length > 0 ? false : true
         )
     }
 
@@ -75,6 +101,11 @@ const Login = (props) => {
             <div className={ styles.margin }>
                 <InputForm id="password" type="password" title="Password" value={ state.password } onChange={ handleChange }/>
             </div>
+            <GoogleLogin 
+                buttonText="Login" onSuccess={responseGoogle} 
+                onFailure={responseGoogle} cookiePolicy={'single_host_origin'}
+                clientId="280459540430-mi9mnun9l75grmgdk1e81ajqtn94s4uo.apps.googleusercontent.com"
+            />
             <div className={ styles.margin } >
                 <InputBtn name="Login" disabled={ isDisabledBtn() } onClick={ handleSubmitClick } />
             </div>
