@@ -44,10 +44,21 @@ module.exports = {
                             modules: { localIdentName: '[name]__[local]___[hash:base64:5]' },
                         },
                     },
-                    {
-                        loader: 'sass-loader',
-                    },
+                    { loader: 'sass-loader'},
                 ],
+            },
+            {
+                test: /\.styl$/,
+                use: [
+                    { loader: 'style-loader'},
+                    {
+                      loader: 'css-loader',
+                      options: {
+                          modules: true
+                      }
+                    },
+                    { loader: 'stylus-loader'},
+                ]
             },
         ],
     },
