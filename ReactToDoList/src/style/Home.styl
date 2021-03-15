@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.paddingTop {
+    padding-top: 35px;
+}
+.subSection {
+    width: 90%;
+    margin: 0 auto;
+}
+.youTube {
+    display: flex;
+    justify-content: center;    
+    background-color: rgb(216, 255, 169)
+    iframe {
+        width: 75vw;
+        height: 70vh;
+    }
+}
+.easySection {
+    padding: 30px 0px;    
+}
+.easyContainer {
+    display: flex;   
+    justify-content: center; 
+}
+.easyItem {
+    padding: 20px;    
+    text-align: center;
+}
+.easyFont {
+    font-size: 1.75rem;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+.easyText {
+    margin-top: 10px;
+}
+.hardSection {
+    text-align: center;
+    background-color: #f8f9fa;
+    h2{
+        padding: 50px 0px;
+    }
+}
+.hardContainer {
+    display: flex;   
+    justify-content: center;   
+}
+.hardItem {
+    padding: 20px;
+    text-align: center;    
+}
+.hardText {
+    margin-top: 10px;    
+}
+.learningContainer {
+    display: flex;
+}
+.learningItem{
+    font-size: 18px;
+    padding: 20px;
+    margin-left: 10px;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 50%;
+}
+.howToUseSection {
+    background-color: #f8f9fa;
+    display: flex;
+}
+.howToUseItem {
+    width: 50%;    
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.howToUsePStyle {
+    p {
+        display: flex; 
+        justify-content: flex-end;
+        font-size: 18px;
+    }
+}
+.howToUsePStyle2 {
+    p {
+        margin-bottom: 0px;
+        line-height: 25px;
+    }
+}
+.CourseSyllabusSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: sticky;
+    top: 35px;
+    background-color: white;
+    width: 100%;
+}
+.imageCarouselSection{
+    display: flex;
+    justify-content: center;
+    // background-color: yellow;
+}
+
+.imageCarouselView {
+    width: 450px;
+    overflow: auto;
+    position: relative;
+}
+.imageCarouseRightArrow {
+    position: relative;
+}
+.imageCarouseRightArrow::before {
+    content: "<";    
+    font-size: 50px;
+    position: absolute;
+    left: -40px;
+    top: 35%;
+}
+.imageCarouseLeftArrow {
+    position: relative;
+}
+.imageCarouseLeftArrow::before {
+    content: ">";    
+    font-size: 50px;
+    position: absolute;
+    right: -40px;
+    top: 35%;
+}
+
+@keyframes move {
+    20% {
+        transform: translateX(0px);    
+    }
+    40% {
+        transform: translateX(-450px);
+    }
+    60% {
+        transform: translateX(-900px);
+    }
+    80% {
+        transform: translateX(-1350px);
+    }
+    100% {
+        transform: translateX(-1800px);    
+    }
+    // 100% {
+    //     transform: translateX(-2250px);    
+    // }
+}
+.imageCarouselSource {
+    display: flex;    
+    animation: move 30s 2s infinite;
+}

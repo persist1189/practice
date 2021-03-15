@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom"
 import { MyTasks } from '../MyTasks'
 import { InProgress } from "../InProgress"
 import { Completed } from "../Completed"
-import { Home } from "../Home"
+import Home from "../Home"
 import { Login } from "../Login"
 import Register from "../Register"
 import styles from "../../index.scss"
