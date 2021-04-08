@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { List } from "../List"
-import styles from "../../index.scss"
+import styles from '../../index.scss'
 
 class ConnectTodoLists extends React.Component {
     render() {

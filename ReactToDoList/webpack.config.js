@@ -2,29 +2,51 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: ['./src/index.jsx'],
+    context: path.resolve(__dirname, './src'), // entry 為哪個資料夾
+    entry: {
+        'index': './index.jsx',
+        'Obj': 'Obj'
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './dist/'),
+        path: path.resolve(__dirname, './dist'),
+        filename: './js/[name].js'
+    },
+    resolve: {
+        modules: [
+            path.resolve('src'),
+            path.resolve('node_modules'),
+            path.resolve('src/Object'),
+        ],
+        extensions: ['.js']
+    },
+    devServer: {
+        compress: true,
+        port: 9000,
+        stats: {
+            asserts: true,
+            cached: false,
+            chunkModules: false,
+            chunkOrigins: false,
+            chunks: false,
+            colors: true,
+            hash: false,
+            modules: false,
+            reasons: false,
+            source: false,
+            version: false,
+            warnings: false
+        },
     },
     plugins: [
         new MiniCssExtractPlugin({
+            path: path.resolve(__dirname,'/dist'),
             filename: "./style/index.css",
         }),
     ],
     module: {
         rules: [
             {
-                test: /.js$/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env'],
-                    },
-                },
-            },
-            {
-                test: /.jsx$/,
+                test: /.(jsx)$/,
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -33,9 +55,17 @@ module.exports = {
                 },
             },
             {
+                test: /\.html$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]'
+                    }
+                }]
+            },
+            {
                 test: /\.(scss)$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
@@ -49,8 +79,7 @@ module.exports = {
             },
             {
                 test: /\.styl$/,
-                use: [
-                    { loader: 'style-loader'},
+                use: [{ loader: 'style-loader'},
                     {
                       loader: 'css-loader',
                       options: {
@@ -58,14 +87,17 @@ module.exports = {
                       }
                     },
                     { loader: 'stylus-loader'},
+                    
                 ]
+            },
+            {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+            },
+            {
+                test: /\.js$/,
+                use: 'babel-loader'
             },
         ],
     },
-    //增加一個給 devserver 的設定
-    devServer: {
-        contentBase: "./dist",
-        //指定開啟 port 為 9000
-        port: 9000
-    }
 };

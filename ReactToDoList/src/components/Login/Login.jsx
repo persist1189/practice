@@ -37,7 +37,9 @@ const Login = (props) => {
     })
 
     const responseGoogle = (res) => {
-        let data = res.profileObj;
+        let data = res && res.profileObj;
+        if (!data) return false;
+        console.log(data);
         setState(prev => ({
             ...prev,
             googleName: data.name,
