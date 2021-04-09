@@ -1,21 +1,24 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     context: path.resolve(__dirname, './src'), // entry 為哪個資料夾
     entry: {
-        'index': './index.jsx',
+        'index': './index.js',
         'Obj': 'Obj'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: './js/[name].js'
+        filename: './js/[name].js?[hash8]'
     },
-    resolve: {
+    resolve: { 
         modules: [
             path.resolve('src'),
             path.resolve('node_modules'),
             path.resolve('src/Object'),
+            path.resolve('src/images'),
+            path.resolve('src/assets'),
         ],
         extensions: ['.js']
     },
@@ -42,6 +45,11 @@ module.exports = {
             path: path.resolve(__dirname,'/dist'),
             filename: "./style/index.css",
         }),
+        new CopyPlugin({
+            patterns: [
+              { from: "assets", to: "assets" },
+            ],
+        }),
     ],
     module: {
         rules: [
@@ -53,6 +61,7 @@ module.exports = {
                         presets: ['@babel/preset-react', '@babel/preset-env'],
                     },
                 },
+                include: path.resolve('.'),
             },
             {
                 test: /\.html$/,
@@ -64,39 +73,91 @@ module.exports = {
                 }]
             },
             {
-                test: /\.(scss)$/,
-                use: [{
-                        loader: MiniCssExtractPlugin.loader,
-                    },
+                test: /\.(woff|woff2|ttf|eot)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]?[hash8]'
+                },
+                include: path.resolve('src/assets'),
+                exclude: path.resolve('./node_modules'),
+            },
+            {
+                test: /\.scss$/,
+                use:[
+                    MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: { localIdentName: '[name]__[local]___[hash:base64:5]' },
-                        },
+                            modules: { 
+                                localIdentName: '[name]__[local]___[hash:base64:5]'
+                            },
+                        }
                     },
-                    { loader: 'sass-loader'},
+                    'sass-loader'
                 ],
+                include: path.resolve('src'),
+                exclude: path.resolve('./node_modules'),
             },
             {
                 test: /\.styl$/,
-                use: [{ loader: 'style-loader'},
+                use: [
+                    'style-loader',
                     {
-                      loader: 'css-loader',
-                      options: {
-                          modules: true
-                      }
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                        }
                     },
-                    { loader: 'stylus-loader'},
-                    
-                ]
+                    "stylus-loader"
+                ],
+                include: path.resolve('src/style'),
+                exclude: path.resolve('./node_modules'),
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'
+                ],
+                include: path.resolve('src'),
+                exclude: path.resolve('./node_modules'),
             },
             {
                 test: /\.js$/,
-                use: 'babel-loader'
+                use: 'babel-loader',
+                include: path.resolve('.'),
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                include: path.resolve('src/images'),
+                exclude: path.resolve('./node_modules'),
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                            name: '[path][name].[ext]?[hash:8]'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                               progressive: true,
+                               quality: 65
+                            },
+                            optipng: {
+                               enabled: false,
+                            },
+                            pngquant: {
+                               quality: '65-90',
+                               speed: 4
+                            },
+                            gifsicle: {
+                              interlaced: false,
+                            },
+                        }
+                    }
+            ]
             },
         ],
     },
