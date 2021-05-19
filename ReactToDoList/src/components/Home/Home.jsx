@@ -1,6 +1,39 @@
 import React from "react"
 import styles from "../../style/Home.styl"
 
+const Bootstrap = () => {
+    return (
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div className={ styles.item}>
+                        <img class="w-100" src="https://picsum.photos/350/250?random=2" alt="pic"></img>
+                        <p>https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div className={ styles.item}>
+                        <img class="w-100" src="https://picsum.photos/350/250?random=2" alt="pic"></img>
+                        <p>https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div className={ styles.item}>
+                        <img class="w-100" src="https://picsum.photos/350/250?random=2" alt="pic"></img>
+                        <p>https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div className={ styles.item}>
+                        <img class="w-100" src="https://picsum.photos/350/250?random=2" alt="pic"></img>
+                        <p>https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const Banner = () => {
     return (
         <div className={ styles.youTube }>
@@ -215,6 +248,7 @@ const Home = () => {
     return (
         <div className={ styles.paddingTop }>
             <div className={ styles.main }>
+                <Bootstrap/>
                 <Banner/>
                     <div className={ styles.subSection }>
                         <ThinkCssIsEasyToLearn/>
