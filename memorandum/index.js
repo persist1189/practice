@@ -21,18 +21,30 @@ let render = () => {
     list.innerHTML = htmlStr;
 }
 
-add.addEventListener('click', () => {
+let addBtn = () => {
     if(content.value === '' || date.value === '' || time.value === '' ){
         alert('請填寫內容');
+    } else {
+      listContent.unshift({
+          content: content.value,
+          date: date.value,
+          time: time.value
+      })
+      render();
+      content.value = ''  
+      date.value = ''  
+      time.value = ''  
     }
-    
-    listContent.unshift({
-        content: content.value,
-        date: date.value,
-        time: time.value
-    })
+}
 
-    render();  
+window.addEventListener('keyup', (e) => {
+    if(e.keyCode === 13){
+        addBtn()
+    }
+})
+
+add.addEventListener('click', () => {
+    addBtn()
 })
 
 remove.addEventListener('click', () => {
