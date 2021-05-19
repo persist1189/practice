@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    margin: 20px auto;
+    background-color: #d3effb;  
+    width: 50vw;
+}
+
+.memorandum {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+h1, p, input {
+    margin-bottom: 10px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+}
+
+.button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    border: 0;
+    box-sizing: border-box;
+}
+.add {
+    background-color: #000;
+}
+
+.remove {    
+    background-color: rgb(212, 101, 101);
+}
+
+.displayContent ul {
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.displayContent ul li {
+    padding-top: 20px;
+}
