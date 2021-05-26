@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    // readyState 0 - 以建立 XMLHttpRequest 但還沒有連結我要撈的資料
+    let xhr = new XMLHttpRequest(); 
+    // readyState 1 - 使用 open() 但是還沒把資料送出去 
+    // open('method', 'url', 'async') method -> get / post 
+    // async true -> 非同步，程式會直接往下執行，不會等值撈到。
+    // async false -> 同步，程式會等待拿到值才會執行。
+    xhr.open('get', 'https://hexschool.github.io/ajaxHomework/data.json', true );
+    // readyState 2 - 使用 send() 送出資料 () 就是要送出的資料 
+    xhr.send(null);
+    // readyState 3 - loading 中 資料太大時出現
+    // readyState 4 - 撈到資料數據完全收到
+    xhr.onload = () => {
+        if(xhr.status === 200) {
+            let str = JSON.parse(xhr.response);
+            document.querySelector('#name').innerHTML = str[0].name;
+        } else {
+            console.log('error data');
+        }
+        
+    }
+
+
+</script>
+<body>
+    <div>
+        <p id="name"></p>
+    </div>
+
+</body>
+</html>

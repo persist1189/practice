@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+<body>
+    <div class="register">
+        <form action="">
+            註冊：
+            <br/>
+            Account:
+            <input type="text" class="account">
+            <br/>
+            Password:
+            <input type="password" class="password">
+            <br/>
+            <input type="button" value="Register" class="Register">
+        </form>
+    </div>   
+    <br/>
+    <div class="login">
+        <form action="">
+            Login:
+            <br/>
+            Account:
+            <input type="text" class="loginAccount">
+            <br/>
+            Password:
+            <input type="password" class="loginPassword">
+            <br/>
+            <input type="button" value="Login" class="Login">
+        </form>
+    </div>
+    <script>
+        let registerBtn = document.querySelector('.Register');
+        registerBtn.addEventListener('click',check);
+
+        function check(){
+            let email = document.querySelector('.account').value;
+            let password = document.querySelector('.password').value;
+            let account = {};
+            account.email = email;
+            account.password = password;
+            let data = JSON.stringify(account);
+            let xhr = new XMLHttpRequest();
+            xhr.open('post', 'https://hexschool-tutorial.herokuapp.com/api/signup', true);
+            xhr.setRequestHeader('Content-type', 'application/json');
+            xhr.send(data);
+            xhr.onload = () => {
+                let response = JSON.parse(xhr.responseText);
+                alert(response.message);
+            }
+        }
+
+        let loginBtn = document.querySelector('.Login');
+        loginBtn.addEventListener('click', login);
+
+        function login(){
+            let email = document.querySelector('.loginAccount').value;
+            let password = document.querySelector('.loginPassword').value;
+            let loginAccount = {}
+            loginAccount.email = email;
+            loginAccount.password = password;
+            let data = JSON.stringify(loginAccount);
+            let xhr = new XMLHttpRequest();
+            xhr.open('post', 'https://hexschool-tutorial.herokuapp.com/api/signin', true);
+            xhr.setRequestHeader('Content-type', 'application/json');
+            xhr.send(data);
+            xhr.onload = () => {
+                let loginCallBackData = JSON.parse(xhr.responseText);
+                alert(loginCallBackData.message);
+            }
+        }   
+    </script>
+</body>
+</html>
+
