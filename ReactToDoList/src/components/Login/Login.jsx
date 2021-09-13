@@ -24,7 +24,6 @@ const InputBtn = (props) => {
 }
 
 
-
 const Login = (props) => {
     const [state, setState] = useState({ 
         email: "", password: "" ,
@@ -34,12 +33,12 @@ const Login = (props) => {
         googleSecondName: '',
         googleId: '',
         googleIcon: '',
+        getData: true,
     })
 
     const responseGoogle = (res) => {
         let data = res && res.profileObj;
         if (!data) return false;
-        console.log(data);
         setState(prev => ({
             ...prev,
             googleName: data.name,
@@ -48,6 +47,7 @@ const Login = (props) => {
             googleSecondName: data.giveName,
             googleId: data.googleId,
             googleIcon: data.imageUrl,
+            getData: false,
         }))
     }
 
@@ -58,10 +58,10 @@ const Login = (props) => {
         )
     }
 
-    const inputRef = useRef(null)
-    useEffect(() => {
-        inputRef.current.focus();
-    },[])
+    // const inputRef = useRef(null)
+    // useEffect(() => {
+    //     inputRef.current.focus();
+    // },[])
 
     const handleSubmitClick = (e) => {
         e.preventDefault();
@@ -96,26 +96,49 @@ const Login = (props) => {
         const { id, value } = e.target
         setState(preState => ({ ...preState, [id] : value }))
     }
-
-    return (
-        <div className={ styles.center }>
-            <InputForm id="email" type="text" title="Email" value={ state.email } inputRef={ inputRef } onChange={ handleChange }/>
-            <div className={ styles.margin }>
-                <InputForm id="password" type="password" title="Password" value={ state.password } onChange={ handleChange }/>
+    
+    if(state.getData){
+        return (
+            // 進到畫面浮標自動到 email 欄位
+            <div className={ styles.center }>
+                {/* <InputForm id="email" type="text" title="Email" value={ state.email } inputRef={ inputRef } onChange={ handleChange }/> */}
+                <InputForm id="email" type="text" title="Email" value={ state.email } onChange={ handleChange }/>
+                <div className={ styles.margin }>
+                    <InputForm id="password" type="password" title="Password" value={ state.password } onChange={ handleChange }/>
+                </div>
+                <GoogleLogin 
+                    buttonText="Login" onSuccess={responseGoogle} 
+                    onFailure={responseGoogle} cookiePolicy={'single_host_origin'}
+                    clientId="280459540430-mi9mnun9l75grmgdk1e81ajqtn94s4uo.apps.googleusercontent.com"
+                />
+                <div className={ styles.margin } >
+                    <InputBtn name="Login" disabled={ isDisabledBtn() } onClick={ handleSubmitClick } />
+                </div>
+                <div className={ styles.margin } >
+                    <InputBtn name="Register Page" onClick={ toRegisterBtn } />
+                </div>
             </div>
-            <GoogleLogin 
-                buttonText="Login" onSuccess={responseGoogle} 
-                onFailure={responseGoogle} cookiePolicy={'single_host_origin'}
-                clientId="280459540430-mi9mnun9l75grmgdk1e81ajqtn94s4uo.apps.googleusercontent.com"
-            />
-            <div className={ styles.margin } >
-                <InputBtn name="Login" disabled={ isDisabledBtn() } onClick={ handleSubmitClick } />
+        )
+    } else {
+        return (
+            <div className={ styles.center }>
+                <div className={ styles.info }>
+                    <h3 className={ styles.title }>Success</h3>
+                    <div className={ styles.header}>
+                        <div>
+                            <img className={ styles.borderRa }src={state.googleIcon}></img>
+                        </div>
+                        <ul className={ styles.centers }>
+                            <li>{`email: ${state.googleEmail}`}</li>
+                            <li>{`name: ${state.googleName}`}</li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
-            <div className={ styles.margin } >
-                <InputBtn name="Register Page" onClick={ toRegisterBtn } />
-            </div>
-        </div>
-    )
+        )
+    }
+    
 }
 
 export { InputForm, Login, InputBtn };

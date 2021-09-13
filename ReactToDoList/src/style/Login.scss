@@ -34,3 +34,21 @@
   color: white;
   background-color: red;
 }
+.title {
+  background: rgb(238, 245, 230);
+  padding: 20px 50px;
+  text-align: center;
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
+}
+.header {
+  display: flex;
+}
+.centers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.borderRa{
+  border-radius: 50%;
+}
