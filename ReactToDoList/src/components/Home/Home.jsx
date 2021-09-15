@@ -36,10 +36,8 @@ const Bootstrap = () => {
 
 const Banner = () => {
     return (
-        <div className={ styles.youTube }>
-            <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fiDZGZMN9wE" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
+        <div className={ styles.banner }>
+            <img src="https://picsum.photos/350/250?random=50" alt="easy" height="400px"  width="100%"/>
         </div>
     )
 }
@@ -77,19 +75,19 @@ const CssHardRefined = () => {
             <div className={ styles.hardContainer }>
                 <div className={ styles.hardItem}>
                     <div>
-                        <img src="https://picsum.photos/350/250?random=3" alt="hardCss"/>
+                        <img src="https://picsum.photos/280/250?random=3" alt="hardCss"/>
                         <p className={ styles.hardText }>沒代表作品，找不到版型練習</p>
                     </div>
                 </div>
                 <div className={ styles.hardItem}>
                     <div>
-                        <img src="https://picsum.photos/350/250?random=4" alt="hardCss2"/>
+                        <img src="https://picsum.photos/280/250?random=4" alt="hardCss2"/>
                         <p className={ styles.hardText }>沒足夠知識，語法知識量不足</p>
                     </div>
                 </div>
                 <div className={ styles.hardItem}>
                     <div>
-                        <img src="https://picsum.photos/350/250?random=5" alt="hardCss3"/>
+                        <img src="https://picsum.photos/280/250?random=5" alt="hardCss3"/>
                         <p className={ styles.hardText }>沒實戰機會，切版熟練度太低</p>
                     </div>
                 </div>
@@ -102,7 +100,7 @@ const LearningIsNotAPerson = ({ h2, h2Br, p }) => {
     return (
         <div className={ styles.learningSection }>
             <div className={ styles.learningContainer }>
-                <div className={ styles.learningItem }>
+                <div className={ styles.learningImgPadding }>
                     <img src="https://picsum.photos/450/270?random=6" alt="learning1"/>
                 </div>
                     <div className={ styles.learningItem }>
@@ -149,38 +147,46 @@ const CourseSyllabusFromTheShallower = () => {
 const ImageCarousel = () => {
     
     let rightArrow = (arrow) => {
+        // 取得 畫布的元件
         let element = document.getElementById('imageCarouselSource');
+        // 取得 css style
         let style = window.getComputedStyle(element)
+        console.log(style.transform, 'getStyle');
         let matrix = new WebKitCSSMatrix(style.transform);
         let translateX = matrix.m41;
         if(arrow === "right"){
-            if(translateX > -3154){
-                element.style.transform = "translateX("+ (translateX - 1051) + "px)";   
+            // 點擊 right 箭頭，計算目前畫面上的位置
+            if(translateX > -1801){
+                element.style.transform = "translateX("+ (translateX - 600) + "px)";   
             } else {
                 element.style.transform = "translateX(0px)";
             }
         } else {
-            if(translateX < -1){
-                element.style.transform = "translateX("+ (translateX + 1051) + "px)";   
+            // 點擊 left 箭頭
+            if(translateX <= -1){
+                element.style.transform = "translateX("+ (translateX + 600) + "px)";   
             } else {
-                element.style.transform = "translateX(-4204px)";   
+                element.style.transform = "translateX(-2400px)";   
             }
         }
     }  
 
     return (
-        <div id="cancelSticky" className={ styles.imageCarouselSection }>
-        <div className={ styles.imageCarouseRightArrow} onClick={() => { rightArrow("right") }}></div>
-            <div className={ styles.imageCarouselView }>
-                <div id="imageCarouselSource" className={ styles.imageCarouselSource }>
-                    <img src="https://picsum.photos/1051/270?random=8" alt="carousel"/>
-                    <img src="https://picsum.photos/1051/270?random=9" alt="carousel1"/>
-                    <img src="https://picsum.photos/1051/270?random=10" alt="carousel2"/>
-                    <img src="https://picsum.photos/1051/270?random=11" alt="carousel3"/>
-                    <img src="https://picsum.photos/1051/270?random=12" alt="carousel4"/>
+        // 將輪播視窗置中
+        <div className={ styles.imageCarouselSection }>
+            <div className={ styles.imageCarouseLeftArrow} onClick={ () => { rightArrow("left") }}>{ "<" }</div>
+                {/* 限制住圖片大小，超過就隱藏 */}
+                <div className={ styles.imageCarouselView }>
+                    { /* 設定起始值為 0 */ }
+                    <div id="imageCarouselSource" className={ styles.imageCarouselSource }>
+                        <img src="https://picsum.photos/600/270?random=8" alt="carousel"/>
+                        <img src="https://picsum.photos/600/270?random=9" alt="carousel1"/>
+                        <img src="https://picsum.photos/600/270?random=10" alt="carousel2"/>
+                        <img src="https://picsum.photos/600/270?random=11" alt="carousel3"/>
+                        <img src="https://picsum.photos/600/270?random=12" alt="carousel4"/>
+                    </div>
                 </div>
-            </div>
-            <div className={ styles.imageCarouseLeftArrow} onClick={ () => { rightArrow("left") }}></div>
+                <div className={ styles.imageCarouseRightArrow } onClick={() => { rightArrow("right") }}> {">"} </div>
         </div>
     )
 }
@@ -235,10 +241,10 @@ const GameTeam = () => {
                 <div className={ styles.GameTeamMember }>
                     <Lecturer first_job_title="乾太 / 後端工程師" second_job_title="Ray / 前端工程師" 
                               first_description="我雖然不會寫程式，但寫系統略懂" second_description="戰鬥吧工程師們，世界和平靠你們惹" 
-                              first_img="https://picsum.photos/255/255?random=15" second_img="https://picsum.photos/255/255?random=17"/>
+                              first_img="https://picsum.photos/200/200?random=15" second_img="https://picsum.photos/200/200?random=17"/>
                     <Lecturer first_job_title="俊儀 / UI 設計師" second_job_title="佳瑜 / UI 設計師" 
                               first_description="這次的 UI 設計稿都是我設計的辣" second_description="這次的 UI 設計稿都是我設計的辣" 
-                              first_img="https://picsum.photos/255/255?random=18" second_img="https://picsum.photos/255/255?random=19"/>
+                              first_img="https://picsum.photos/200/200?random=18" second_img="https://picsum.photos/200/200?random=19"/>
                 </div>
         </div>
     )
@@ -248,23 +254,20 @@ const Home = () => {
     return (
         <div className={ styles.paddingTop }>
             <div className={ styles.main }>
-                <Bootstrap/>
                 <Banner/>
-                    <div className={ styles.subSection }>
-                        <ThinkCssIsEasyToLearn/>
-                        <CssHardRefined/>
-                        <LearningIsNotAPerson h2="學習不是一個人的事情" h2Br="你需要找人來幫你" p="雖說網路上有眾多的資源、眾多的教學，但這些內容多到眼花撩亂且品質參疵不齊難以整合，本課程將帶你打通 JavaScript 拆解、Vue 實戰運用、怎麼做都不難看的版型技巧！"/>
-                        <HowToUseJavaScript/>
-                        <CourseSyllabusFromTheShallower/>
-                        <CssHardRefined/>
-                        <LearningIsNotAPerson h2="為了讓你真的學會，" h2Br="我們做了個團戰遊戲任務系統" p="反派霸格黨為了不讓大家成為網頁開發者，都會故意在程式碼埋 Bug、讓你的電腦不安份，來降低學習意願這次他們派了隻 BOSS 來阻撓六角學院，打敗他的方式，只有繳交每週關卡作業，化為攻擊力來打敗牠！。"/>
-                        <ImageCarousel/>
-                        <LecturerTitle title="講師團隊" content="直播教學都靠我們！" />
-                        <Lecturer first_job_title="吸水布 / 副校長" second_job_title="伸手牌 / 校長" first_description="沒有我教不會 JS 邏輯，儘管來吧！" second_description="我是 JS 教學之神，莫非你不知道？" first_img="https://picsum.photos/255/255?random=13" second_img="https://picsum.photos/255/255?random=14" />
-                        <GameTeam/>
-                    </div>
+                <ThinkCssIsEasyToLearn/>
+                <CssHardRefined/>
+                <LearningIsNotAPerson h2="學習不是一個人的事情" h2Br="你需要找人來幫你" p="雖說網路上有眾多的資源、眾多的教學，但這些內容多到眼花撩亂且品質參疵不齊難以整合，本課程將帶你打通 JavaScript 拆解、Vue 實戰運用、怎麼做都不難看的版型技巧！"/>
+                <HowToUseJavaScript/>
+                <CourseSyllabusFromTheShallower/>
+                <CssHardRefined/>
+                <LearningIsNotAPerson h2="為了讓你真的學會，" h2Br="我們做了個團戰遊戲任務系統" p="反派霸格黨為了不讓大家成為網頁開發者，都會故意在程式碼埋 Bug、讓你的電腦不安份，來降低學習意願這次他們派了隻 BOSS 來阻撓大家，打敗他的方式，只有繳交每週關卡作業，化為攻擊力來打敗牠！。"/>
+                <ImageCarousel/>
+                <LecturerTitle title="講師團隊" content="直播教學都靠我們！" />
+                <Lecturer first_job_title="吸水布 / 副校長" second_job_title="伸手牌 / 校長" first_description="沒有我教不會 JS 邏輯，儘管來吧！" second_description="我是 JS 教學之神，莫非你不知道？" first_img="https://picsum.photos/255/255?random=13" second_img="https://picsum.photos/255/255?random=14" />
+                <GameTeam/>
             </div>
-        </div>
+        </div>   
     )
 }
 

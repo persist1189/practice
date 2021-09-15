@@ -1,3 +1,11 @@
+// reset css
+
+*,*::before,*::after{
+	box-sizing: border-box; /* 可不用算padding */
+}
+
+
+
 body{
   margin: 0px;
   background: #E1E1E1;
@@ -189,3 +197,5 @@ body{
   margin-right: 15px;
   border:none;
 }
+
+

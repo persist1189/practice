@@ -3,6 +3,10 @@
     margin: 0;
     list-style: none;
 }
+.main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 .paddingTop {
     padding-top: 35px;
 }
@@ -10,15 +14,7 @@
     width: 90%;
     margin: 0 auto;
 }
-.youTube {
-    display: flex;
-    justify-content: center;    
-    background-color: rgb(216, 255, 169)
-    iframe {
-        width: 75vw;
-        height: 70vh;
-    }
-}
+
 .easySection {
     padding: 30px 0px;    
 }
@@ -59,6 +55,10 @@
 }
 .learningContainer {
     display: flex;
+    justify-content: center;
+}
+.learningImgPadding{
+    padding: 30px 0px 30px 100px;       
 }
 .learningItem{
     font-size: 18px;
@@ -113,34 +113,25 @@
 }
 
 .imageCarouselView {
-    width: 1051px;
+    width: 600px;
     overflow: hidden;
-    position: relative;
 }
 .imageCarouseRightArrow {
-    position: relative;
-}
-.imageCarouseRightArrow::before {
-    content: ">";    
-    font-size: 50px;
-    position: absolute;
-    right: -70rem;
-    top: 35%;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    margin-left: 10%;    
 }
 .imageCarouseLeftArrow {
-    position: relative;
-}
-.imageCarouseLeftArrow::before {
-    content: "<";    
-    font-size: 50px;
-    position: absolute;
-    left: -70rem;
-    top: 35%;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;    
 }
 
 .imageCarouselSource {
     display: flex;    
-    transform: translateX(0px);
+    transform: translateX(0);
 }
 .lecturerTitleSection{
     text-align: center;
@@ -188,7 +179,17 @@
     position: absolute;    
     top: -15%;
 }
+.GameTeamSection {
+    max-width: 1400px;    
+}
 .GameTeamMember {
     display: flex;    
     justify-content: center;
 }
+
+@media (max-width: 767px){
+    body {
+        background: red;
+    }
+}
+
