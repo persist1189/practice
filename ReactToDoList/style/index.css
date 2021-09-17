@@ -1,131 +1,129 @@
-// reset css
-
-*,*::before,*::after{
-	box-sizing: border-box; /* 可不用算padding */
+@charset "UTF-8";
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 可不用算padding */
 }
 
-
-
-body{
+body {
   margin: 0px;
   background: #E1E1E1;
 }
 
-//ToDoList Css
-
-#topBlock{
+#topBlock {
   background: #4A90E2;
   height: 75px;
   text-align: center;
   margin-bottom: 24px;
-  box-shadow: 1px 1px 5px #000;
+  -webkit-box-shadow: 1px 1px 5px #000;
+          box-shadow: 1px 1px 5px #000;
 }
 
 .paddingTop {
   padding-top: 35px;
 }
 
-.bookMark{
+.bookMark {
   background: #4A90E2;
   color: #00408B;
   text-align: center;
   font-size: 24px;
   height: 75px;
   width: 220px;
-  border:none;
+  border: none;
 }
 
-.select_bookMark{
+.select_bookMark {
   color: #ffffff;
   height: 70px;
-  border-bottom:solid 5px #00408B;
+  border-bottom: solid 5px #00408B;
 }
 
-
-.content{
+.content {
   text-align: center;
 }
 
 /*整體置中設定寬度*/
-.inputTasksForm{
+.inputTasksForm {
   width: 620px;
   margin: 0 auto;
 }
 
-.inputTask{
+.inputTask {
   height: 385px;
   background: #F2F2F2;
   text-align: left;
 }
 
-.inputTaskTitle{
+.inputTaskTitle {
   width: 620px;
   height: 75px;
   background: #F2F2F2;
-  margin:0px auto;
+  margin: 0px auto;
   text-align: left;
-  border-bottom:solid 3px #C8C8C8 ;
+  border-bottom: solid 3px #C8C8C8;
 }
 
-.taskTitle{
+.taskTitle {
   background: #F2F2F2;
-  border:none;
+  border: none;
   height: 28px;
   width: 380px;
   font-size: 24px;
   margin: 25px;
 }
 
-.taskChk{
+.taskChk {
   margin-left: 20px;
   zoom: 2;
 }
 
-.icon{
+.icon {
   margin-left: 20px;
 }
 
-.icon_edit{
+.icon_edit {
   color: #4A90E2;
 }
 
-.inputName{
+.inputName {
   padding-left: 50px;
   padding-top: 25px;
 }
 
-.inputForm{
+.inputForm {
   padding-left: 75px;
 }
 
-.inputStyle{
-  border:none;
+.inputStyle {
+  border: none;
   font-size: 15px;
 }
 
-.inputDateTime{
+.inputDateTime {
   height: 35px;
   width: 162px;
 }
 
-.addButton{
+.addButton {
   width: 310px;
   height: 60px;
   font-size: 24px;
   text-align: center;
-  border:none;
+  border: none;
 }
 
-.saveButton{
+.saveButton {
   background: #4A90E2;
   color: #ffffff;
 }
 
-.cancelButton{
+.cancelButton {
   background: #fffffd;
   color: #D0021B;
 }
-#addTask{
+
+#addTask {
   width: 620px;
   height: 65px;
   font-size: 24px;
@@ -133,65 +131,68 @@ body{
   border: 2px solid #C8C8C8;
   border-radius: 5px;
 }
-.complete{
+
+.complete {
   text-decoration: line-through;
   color: #9B9B9B;
 }
 
-.iconImportant{
+.iconImportant {
   color: #F5A623;
-
 }
-.list{
+
+.list {
   background: #F2F2F2;
   height: 100px;
   width: 620px;
   border-radius: 5px;
   text-align: left;
 }
-.listBlock{
+
+.listBlock {
   margin-top: 20px;
   margin: 0 auto;
   margin-bottom: 4px;
 }
-.listIcon{
+
+.listIcon {
   color: #757575;
   font-size: 16px;
   margin-top: -15px;
   margin-left: 50px;
 }
 
-.important{
+.important {
   background: #FFF2DC;
 }
-.countText{
-  margin:5px;
+
+.countText {
+  margin: 5px;
   text-align: left;
   font-size: 24px;
   color: #C8C8C8;
 }
-.InputTaskForm{
+
+.InputTaskForm {
   text-align: center;
 }
 
-//HomePage Css
-.nav {
-  background: rgb(59, 153, 217);
-  position: sticky;
-  top: 0;
-  text-align: right; 
+#NavBar {
+  background: white;
+  text-align: right;
+  position: fixed;
+  min-width: 100%;
 }
 
-.HomeBookMark{
+.HomeBookMark {
   border: none;
-  background: rgb(59, 153, 217);
-  color: white;
+  font-size: 15px;
+  background: white;
+  color: black;
   cursor: pointer;
   height: 35px;
   width: 100px;
   margin: 15px 0px;
   font-weight: 500;
 }
-
-@media (max-width: 767px) {
-}
+/*# sourceMappingURL=index.css.map */

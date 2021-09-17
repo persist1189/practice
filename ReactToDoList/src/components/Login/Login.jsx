@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useHistory } from "react-router-dom"
-import styles from "../../style/Login.scss"
+import styles from "../../style/_login.scss"
 import axios from 'axios';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 

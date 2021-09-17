@@ -91,13 +91,14 @@
     p {
         display: flex; 
         justify-content: flex-end;
-        font-size: 18px;
+        font-size: 24px;
     }
 }
 .howToUsePStyle2 {
     p {
         margin-bottom: 0px;
         line-height: 25px;
+        font-size: 18px;
     }
 }
 .CourseSyllabusSection {
@@ -188,8 +189,68 @@
 }
 
 @media (max-width: 767px){
-    body {
-        background: red;
+    .easyContainer {
+        flex-wrap: wrap;
+    }
+    .easyFont {
+        height: 0px;
+        margin-bottom: 10px;
+    }
+    .paddingTop {
+        padding-top: 0px;
+    }
+    .easyItem {
+        padding: 10px;
+    }
+    .hardContainer {
+        flex-wrap: wrap;
+    }
+    .hardItem {
+        padding: 10px;
+    }
+    .hardSection {
+      h2{
+        padding: 20px 0px 10px 0px;
+      }  
+    }
+    .learningContainer {
+        flex-wrap: wrap;
+    }
+    .learningImgPadding {
+        padding: 0px;
+    }
+    .learningItem {
+        padding: 20px;
+        display: inline;
+        width: 100%;
+    }
+    .howToUseSection {
+        display: inline;
+    }
+    .howToUseItem {
+        width: 100%;
+        img {
+           width: 100%;
+        }
+    }
+    .howToUsePStyle {
+        padding: 20px;
+        p {
+            display: inline;
+        }
+    }
+    .lecturerProfile {
+        flex-wrap: wrap;
+    }
+    .lecturerSpeakSection {
+        top: 0;
+        left: -33px;
+    }
+    .lecturerSpeakRightSection {
+        top: 0;
+        left: -25px;
+    }
+    .GameTeamMember {
+        flex-wrap: wrap;
     }
 }
-

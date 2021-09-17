@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from "react"
-import styles from "../../style/Alert.scss"
+import styles from "../../style/_alert.scss"
 
 const Alert = (props) => {
     const [modalDisplay, toggleDisplay] = useState("none")

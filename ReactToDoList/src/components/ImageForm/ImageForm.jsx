@@ -1,6 +1,6 @@
 import React from "react"
 import Article from "../Article"
-import styles from "../../style/ImageForm.scss"
+import styles from "../../style/_imageForm.scss"
 
 const ImageData = [
     { "url": "https://picsum.photos/300/400"}

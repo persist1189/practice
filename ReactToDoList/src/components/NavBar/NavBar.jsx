@@ -5,22 +5,27 @@ import styles from "../../index.scss"
 class NavBar extends React.Component{
     render(){
         return (
-            <div id={styles.NavBar}>
-                <BookMark to="/ToolsPractice"
+            <div className={ styles.nav }>
+                {/* <BookMark to="/ToolsPractice"
                           name="ToolsPractice"
-                          className={styles.HomeBookMark}/>
-                <BookMark to="/ToDoList"
+                          className={`${styles.HomeBookMark} ${styles.none}`}/> */}
+                {/* <BookMark to="/ToDoList"
                           name="ToDoList"
-                          className={styles.HomeBookMark}/>
+                          className={styles.HomeBookMark}/> */}
                 <BookMark to="/"
                           name="Home"
+                          className={styles.HomeBookMark}/>
+                
+                <BookMark to="/about"
+                          name="關於我"
                           className={styles.HomeBookMark}/>
                 <BookMark to="/login"
                           name="登入"
                           className={styles.HomeBookMark}/>
-                <BookMark to="/cssWorld"
+                          
+                {/* <BookMark to="/cssWorld"
                           name="Css世界"
-                          className={styles.HomeBookMark}/>
+                          className={styles.HomeBookMark}/> */}
             </div>
         )
     }

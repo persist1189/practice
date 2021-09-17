@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "../../style/Loan.scss";
+import styles from "../../style/_loan.scss";
 // use hook get Data
 import { useSelector, useDispatch } from 'react-redux';
 // add method & edit 

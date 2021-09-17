@@ -101,7 +101,7 @@ const LearningIsNotAPerson = ({ h2, h2Br, p }) => {
         <div className={ styles.learningSection }>
             <div className={ styles.learningContainer }>
                 <div className={ styles.learningImgPadding }>
-                    <img src="https://picsum.photos/450/270?random=6" alt="learning1"/>
+                    <img src="https://picsum.photos/350/270?random=6" alt="learning1"/>
                 </div>
                     <div className={ styles.learningItem }>
                         <h2>{ h2 } { <br/> } { h2Br }</h2>
@@ -119,11 +119,11 @@ const HowToUseJavaScript = () => {
                     <div className={ styles. howToUsePStyle}>
                         <p>凡參加本次直播班學員，將會獲得</p>
                             <div className={ styles.howToUsePStyle2 }>
-                                <p class="far fa-hand-point-right">專屬學習頻道，百人在線加速學習效率</p>
-                                <p class="far fa-hand-point-right">從 JS 設計模式著手，不僅教你怎麼構，還讓你知道怎麼拆</p>
-                                <p class="far fa-hand-point-right">供新版 API，建置屬於自己的商業主題</p>
-                                <p class="far fa-hand-point-right">專屬 UI 設計框架，完成獨一無二的網站作品</p>
-                                <p class="far fa-hand-point-right">設計講師引導你掌握美感小撇步，質感網頁自己動手做</p>
+                                <p class="far fa-hand-point-right">專屬學習頻道，百人在線加速學習效率</p><br/>
+                                <p class="far fa-hand-point-right">從 JS 設計模式著手，不僅教你怎麼構，還讓你知道怎麼拆</p><br/>
+                                <p class="far fa-hand-point-right">供新版 API，建置屬於自己的商業主題</p><br/>
+                                <p class="far fa-hand-point-right">專屬 UI 設計框架，完成獨一無二的網站作品</p><br/>
+                                <p class="far fa-hand-point-right">設計講師引導你掌握美感小撇步，質感網頁自己動手做</p><br/>
                             </div>
                     </div>
                 </div>
@@ -260,7 +260,6 @@ const Home = () => {
                 <LearningIsNotAPerson h2="學習不是一個人的事情" h2Br="你需要找人來幫你" p="雖說網路上有眾多的資源、眾多的教學，但這些內容多到眼花撩亂且品質參疵不齊難以整合，本課程將帶你打通 JavaScript 拆解、Vue 實戰運用、怎麼做都不難看的版型技巧！"/>
                 <HowToUseJavaScript/>
                 <CourseSyllabusFromTheShallower/>
-                <CssHardRefined/>
                 <LearningIsNotAPerson h2="為了讓你真的學會，" h2Br="我們做了個團戰遊戲任務系統" p="反派霸格黨為了不讓大家成為網頁開發者，都會故意在程式碼埋 Bug、讓你的電腦不安份，來降低學習意願這次他們派了隻 BOSS 來阻撓大家，打敗他的方式，只有繳交每週關卡作業，化為攻擊力來打敗牠！。"/>
                 <ImageCarousel/>
                 <LecturerTitle title="講師團隊" content="直播教學都靠我們！" />

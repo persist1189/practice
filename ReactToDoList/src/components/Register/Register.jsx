@@ -2,7 +2,7 @@ import React,{ useState } from "react"
 import { InputForm, InputBtn } from "../Login"
 import { apiUserRegister, ACCESS_TOKEN_NAME } from '../../constants/apiConstants'
 import { useHistory } from "react-router-dom"
-import styles from "../../style/Login.scss"
+import styles from "../../style/_login.scss"
 import axios from 'axios';
 
 const Register = (props) => {

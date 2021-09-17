@@ -8,6 +8,7 @@ import { Login } from "../Login"
 import Register from "../Register"
 import styles from "../../index.scss"
 import Alert from "../Alert"
+import About from "../About"
 import ToolsPractice from "../ToolsPractice";
 import PrivateRoute from "../../utils/PrivateRoute.jsx"
 import DashBoard from "../DashBoard"
@@ -25,6 +26,7 @@ const ToDo = () => {
                 <Route exact path="/completed" component={Completed} />
             </div>
             <Route exact path="/login" component={ Login }/>
+            <Route exact path="/about" component={ About }/>
             <Route exact path="/ToolsPractice" component={ ToolsPractice } />
             <Route exact path="/CssWorld:name" component={ CssWorld } />
 

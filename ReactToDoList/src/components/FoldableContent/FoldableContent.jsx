@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import styles from '../../style/FoldabelContent.scss'
+import styles from '../../style/_foldabelContent.scss'
 
 const FoldableContent = (props) => {
 
