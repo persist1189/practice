@@ -177,18 +177,18 @@ body {
   text-align: center;
 }
 
-#NavBar {
-  background: white;
+.nav {
+  background: #3b99d9;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   text-align: right;
-  position: fixed;
-  min-width: 100%;
 }
 
 .HomeBookMark {
   border: none;
-  font-size: 15px;
-  background: white;
-  color: black;
+  background: #3b99d9;
+  color: white;
   cursor: pointer;
   height: 35px;
   width: 100px;
