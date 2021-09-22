@@ -7,7 +7,7 @@ const About = () => {
             <div className={ styles.container }>
                 <div className={ styles.header }>
                     <div className={ styles.profile }>
-                        <img className={ styles.profileImg } src="/src/images/ivan.jpg" width="250px" height="250px"></img>
+                        <img className={ styles.profileImg } src="../src/images/ivan.jpg" width="250px" height="250px"></img>
                     </div>
                     <div className={ styles.infoHeader }>
                         <h2>個人資料 <span className={ styles.colorRed }> PROFILE </span></h2>
@@ -75,7 +75,7 @@ const About = () => {
                         <ul className={ `${ styles.contact } ${ styles.infoBody }` }>
                             <li>Email: persist1189@gmail.com</li>
                             <li>Phone: 0908-020-100</li>
-                            <li>作品連結: <a href="https://persist1189.github.io/practice/ReactToDoList/dist/index.html#/about">Click me</a> </li>
+                            <li>作品連結: <a href="https://persist1189.github.io/practice/ReactToDoList/dist/index.html#/about" target="_blank"> Click me</a> </li>
                         </ul>
                     </div>
                 </div>

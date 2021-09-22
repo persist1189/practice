@@ -44,9 +44,6 @@ class ConnectList extends React.Component{
     }
 
     _openEdit(){
-        console.log('111',this.props.listData)
-        console.log('222',this.props.editToDoList)
-
 
         if(event.target.className.indexOf('fa-star') === -1 && event.target.className.indexOf("taskChk") === -1) {
             this._list.current.style.display = "none"
@@ -84,11 +81,10 @@ class ConnectList extends React.Component{
                     <i className={"fas fa-pen fa-lg" + styles.icon} ></i>
                     <div className={ styles.listIcon }>
                         {this.props.listData.date != ''?
-                            <i className={"fa fa-calendar-alt" + " " + styles.icon }></i>: " "}
+                            <i className={`fa fa-calendar-alt ${ styles.icon } ${ styles.marginRight1 }`}></i>: " "}
                         {this.props.listData.date != ""? ` ${this.props.listData.date.substring(5).replace(/-/gi,'/')}` : ""}
 
-                        {this.props.listData.file != ""?
-                            <i className="fas fa-file icon"></i>: " "}
+                        {this.props.listData.file != ''? <i className={`fas fa-file icon ${ styles.marginRight1 }`}></i> : ""}
 
                         {this.props.listData.commit != ""? <i className="far fa-comment-dots icon"></i>: " "}
 

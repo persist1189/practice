@@ -38,7 +38,7 @@ const ProductList = () => {
                         <img src="../src/images/cutView.png" alt="toDoList"></img>
                             <div className={ styles.txt }>
                                 <h2>ToDoList</h2>
-                                <p>使用route</p>
+                                <p>使用route / redux / </p>
                             </div>
                         </div>
                     </div>

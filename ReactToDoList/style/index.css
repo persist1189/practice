@@ -20,11 +20,11 @@ body {
 }
 
 .paddingTop {
-  padding-top: 35px;
+  padding-top: 10px;
 }
 
 .bookMark {
-  background: red;
+  background: #4A90E2;
   color: #00408B;
   text-align: center;
   font-size: 24px;
@@ -159,7 +159,7 @@ body {
   color: #757575;
   font-size: 16px;
   margin-top: -15px;
-  margin-left: 50px;
+  margin-left: 12%;
 }
 
 .important {
@@ -195,5 +195,9 @@ body {
   width: 100px;
   margin: 15px 0px;
   font-weight: 500;
+}
+
+.marginRight1 {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=index.css.map */
