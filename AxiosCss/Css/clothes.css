@@ -1,0 +1,53 @@
+.info {}
+.info .wrap {
+    display: flex;
+    width: 960px;
+    margin: auto;
+}
+.info .wrap .item {
+    width: 50%;
+}
+.info .wrap .item img {
+    width: 100%;
+}
+
+.item .description {
+    line-height: 45px;
+}
+.item .description li {
+    list-style: none;
+}
+.item .description li a {
+    text-decoration: none;
+}
+
+.item .description .title {
+    border: 1px dashed #aaa;
+    padding: 0 10px;
+    width: 70%;
+    font: inherit;
+}
+
+
+
+.img .wrap {
+    width: 960px;
+    margin: auto;
+}
+.img .wrap img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.item .description li a {
+    background-color: rgb(160, 160 ,160);
+    color: white;
+    padding: 0 10px;
+}
+
+.item .description button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5%;
+}

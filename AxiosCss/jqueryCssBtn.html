@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqueryCssBtn</title>
+    <style>
+        .toggle {
+            background-color: black;
+            color:white;
+            max-width: 300px;
+            padding: 10px;
+        }
+        .content {
+            background-color: #aaa;
+            max-width: 300px;
+            padding: 10px;
+        }
+        .content.x {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle">開 / 關</div>
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam laudantium, odit nemo saepe perferendis expedita libero possimus alias corporis minima iusto incidunt dolore ducimus vitae quo quae numquam molestiae laborum ratione sit! Quasi mollitia blanditiis modi pariatur laborum earum ipsam?
+    </div>
+    <!-- import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $(".toggle").click(() => {
+                $(".content").toggleClass("x");
+            })
+        })
+    </script>
+</body>
+</html>

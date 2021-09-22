@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: red;
+}
+
+nav {
+    background-color: black;
+    text-align: center;
+    font-size: 0; /* 為了 a 標籤內的空白處要拿掉 */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* nav 設為 0 已繼承後要再給予值 */
+    padding: 6px 20px;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: tomato;
+}

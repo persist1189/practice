@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d3effb;
+}
+.dialogue {
+    width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 10px #3e92cc;
+    background-color: #f4f5f7;
+}
+.user {
+    display: flex;
+    margin-bottom: 20px;
+    /* 解決框框沒有置中忽大忽小的問題 */
+    align-items: flex-start;
+}
+.user .avatar {
+    width: 60px;
+    text-align: center;
+    /* 讓 flex 滿版的特性自動縮排消失 */
+    flex-shrink: 0;
+}
+.user .pic {
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user .pic img {
+    width: 100%;
+    vertical-align: middle;
+}
+.txt {
+    background-color: #ccc;
+    padding: 16px;
+    border-radius: 10px;
+    position: relative;
+}
+.remote .txt {
+    margin-left: 20px;
+    margin-right: 80px;
+    background-color: #fff;
+    color: #a1b4c5 ;
+}
+/* 解決沒有對齊最右邊的問題 */
+.local {
+    justify-content: flex-end;
+}
+.local .txt {
+    margin-right: 20px;
+    margin-left: 80px;
+    order: -1;
+    background-color: #3e92cc;
+    color: #fff;
+}
+/* 畫出對話上面的突起物(三角形畫法) */
+.remote .txt::before, .local .txt::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.remote .txt::before {
+    border-right: 10px solid #fff;
+    left: -10px;
+}
+.local .txt::before {
+    border-left: 10px solid #3e92cc;
+    right: -10px;
+}

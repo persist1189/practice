@@ -1,0 +1,12 @@
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    animation: breathe 5s 3 ;
+}
+
+@keyframes breathe {
+    50% { background-color: blue; }
+    100% { background-color: white; }
+}

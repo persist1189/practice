@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.container {
+    display: flex;
+}
+.pic {
+    width: 50%;
+    position: relative;
+}
+.pic img, .item img {
+    width: 100%;
+    vertical-align: middle;
+}
+.image {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    width: 50%;
+    position: relative;
+}
+.pic .txt , .item .txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    line-height: 1.5;
+    opacity: 0;
+    transition: .5s;
+    box-sizing: border-box;
+
+}
+.pic:hover .txt, .item:hover .txt {
+    opacity: 1;
+}

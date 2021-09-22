@@ -1,0 +1,25 @@
+.container {
+    width: 960px;
+    display: flex;
+    margin: auto;
+}
+
+.column {
+    width: 300px;
+    border: 1px solid #aaa;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.column img {
+    width: 100%;
+}
+
+.tab {
+    background-color: red;
+    padding: 10px 6px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+}

@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.container {
+    width: 100%;
+    display: flex;
+}
+.item {
+    position: relative;
+    width: 25%;
+}
+.item img {
+    width: 100%;
+    vertical-align: middle;
+}
+.item:hover .txt {
+    opacity: 1;
+}
+.txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s;
+}
+.txt h2 {
+    color: yellow;
+}
+.txt h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    margin: 10px 0;
+    background-color: #ff0;
+    transition: .5s .2s;
+}
+.item:hover h2:after {
+    width: 100%;
+}
+.txt p {
+    color: white;
+}

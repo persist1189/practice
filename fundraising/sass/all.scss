@@ -1,0 +1,173 @@
+@import '_qa';
+@import '_variable';
+@import '_progress';
+@import 'message';
+
+* {
+    list-style: none;
+    a {
+        text-decoration: none;
+    }
+}
+.noneBorderBotton {
+    border-bottom: none;
+}
+.bgPrimaryColor {
+    background: $primaryColor;
+}
+.bgGray {
+    background: $bgGray;
+}
+.navBorderBottomColor {
+    border-bottom: 4px solid $primaryColor;
+}
+.navLoginBtn, .contentProgressBg {
+    background: $primaryColor;
+}
+.primaryColor {
+    color: $primaryColor;
+}
+.navLiPadding {
+    padding: 24px 12px 0px 12px;
+}
+.mt-1 {
+    margin-top: 16px !important;
+}
+.ml-2 {
+    padding-left: 16px;
+}
+.mIcon {
+    margin: 0px 4px;
+}
+.lh-3 {
+    line-height: 24px;
+}
+.lh-4 {
+    line-height: 32px;
+}
+.ls-1 {
+    letter-spacing: 1px;
+}
+.br-1 {
+    border-radius: 10%;
+}
+.socialBtnPadding {
+    padding: 0px 4px;
+}
+.contentPriceFrontSize {
+    font-size: 32px;
+}
+.navBtn {
+    width: 96px;
+    margin: 0px 8px;
+}
+.badge {
+    padding: 7px 16px;
+}
+.productImg{
+    border-radius: 6%;
+    max-width: 100%;
+}
+.productIcon {
+    width: 24px;
+    height: 24px;
+}
+.productIconPL {
+    padding-left: 25px;
+}
+.bg-lights {
+    background: #fff;
+}
+.borderLeftColor {
+    border-left: 3px solid $primaryColor;
+}
+.borderTopColor {
+    border-top: 3px solid $primaryColor;
+}
+
+.linkLiPadding {
+    padding: 0px 20px;
+}
+
+.active {
+    border-bottom: 3px solid $primaryColor;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.pLH-2 {
+    line-height: 36px;
+}
+.sponsorBtn {
+    background: $primaryColor;
+    max-width: 100%;
+}
+.iconBackGround {
+    background: #858377;
+    color: #fff;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.cardHeadImg {
+    border: 3px solid $primaryColor;
+    border-radius: 50%;
+}
+.support {
+    background: $bgGray;
+    border-left: 4px solid $primaryColor;
+    border-right: 4px solid $primaryColor;
+    border-radius: 10%;
+    padding: 6px 0px;
+}
+.bgSupportBadge {
+    background: $supportBadge;
+}
+.colorSupportBadge {
+    color: $supportBadgeColor;
+}
+.formBg {
+    background: $bgForm;
+}
+.noBorder {
+    border: none;
+}
+.sponsorPadding {
+    padding: 11px 48px;
+}
+.sponsorHover{
+    &:hover{
+        background: $hoverSponsor;
+        color: #fff;
+    }
+}
+.advertising{
+    top: 90px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+.productIconMobilePadding {
+    padding: 2px 8px;
+}
+.center {
+    top: 1px;
+    padding: 16px;
+    font-size: 16px;
+}
+.borderNone {
+    border: none;
+}
+.noBg {
+    background: transparent;
+}
+.changeTrickStyle {
+    &:hover {
+        .changeHeartColor {
+            color: $hoverSponsor;
+        }
+        background: $primaryColor;
+        border: none;
+    }
+}

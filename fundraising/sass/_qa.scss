@@ -1,0 +1,12 @@
+@import '_variable';
+
+.accordionBtnColor {
+    background: white !important; 
+    color: #000 !important;
+}
+.accordionBlock{
+    padding: 7px;
+    border-radius: 10%;
+    background: $primaryColor;
+    margin-right: 10px;
+}

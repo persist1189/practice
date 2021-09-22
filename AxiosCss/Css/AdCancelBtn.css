@@ -1,0 +1,19 @@
+.Ad {
+    background-color: #aaa;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.tab {
+    background-color: red;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    padding: 10px;
+}

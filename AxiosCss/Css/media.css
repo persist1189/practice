@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.media {
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .media {
+        background-color: blue;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .media {
+        background-color: #aaf;
+        display: block;
+    }
+}
