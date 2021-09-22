@@ -12,8 +12,8 @@ class NavBar extends React.Component{
                 {/* <BookMark to="/ToDoList"
                           name="ToDoList"
                           className={styles.HomeBookMark}/> */}
-                <BookMark to="/"
-                          name="Home"
+                <BookMark to="/productList"
+                          name="作品集"
                           className={styles.HomeBookMark}/>
                 
                 <BookMark to="/about"

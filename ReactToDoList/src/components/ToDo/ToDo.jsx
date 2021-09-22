@@ -9,6 +9,7 @@ import Register from "../Register"
 import styles from "../../index.scss"
 import Alert from "../Alert"
 import About from "../About"
+import ProductList from "../ProductList"
 import ToolsPractice from "../ToolsPractice";
 import PrivateRoute from "../../utils/PrivateRoute.jsx"
 import DashBoard from "../DashBoard"
@@ -19,7 +20,7 @@ const ToDo = () => {
 
     return (
         <div>
-            <Route exact path="/" component={Home}/>
+            <Route exact path="/Home" component={Home}/>
             <div className={ styles.paddingTop }>
                 <Route exact path="/ToDoList" component={MyTasks} />
                 <Route exact path="/inProgress" component={InProgress} />
@@ -27,6 +28,7 @@ const ToDo = () => {
             </div>
             <Route exact path="/login" component={ Login }/>
             <Route exact path="/about" component={ About }/>
+            <Route exact path="/productList" component={ ProductList }/>
             <Route exact path="/ToolsPractice" component={ ToolsPractice } />
             <Route exact path="/CssWorld:name" component={ CssWorld } />
 
