@@ -16,20 +16,20 @@ class InputTasksForm extends React.Component {
                                value={this.props.stateData.time} onChange={this.props._changeState}/>
                     </div>
                     <InputName className="fas fa-file" inputName="File" />
-                    <div className={ styles.inputFomr}>
+                    <div className={ styles.inputForm}>
                         <input name='file' type="file" class={ styles.inputStyle} ref={this.props.filebox}
                                onChange={this.props._changeState} /><br/>
                         <span className={ styles.inputStyle }>{this.props.stateData.file}</span>
                     </div>
                     <InputName className="far fa-comment-dots" inputName="Comment" />
                     <div className={ styles.inputForm }>
-                        <textarea name="commit" rows="7" cols="55" class="inputStyle"
+                        <textarea name="commit" rows="7" cols="55" class="inputStyle" className={ styles.commitSize }
                                   value={this.props.stateData.commit} onChange={this.props._changeState}>
                             {this.props.comment}
                         </textarea>
                     </div>
                 </div>
-                <div>
+                <div className={ styles.reverseBtn }>
                     <button type="button"
                             className={ styles.addButton + " " + styles.cancelButton}
                             onClick={this.props.closeAdd}>

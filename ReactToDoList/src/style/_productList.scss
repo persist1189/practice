@@ -9,10 +9,10 @@
     cursor: pointer;
     margin-bottom: 10px;
     &:hover .txt{
-        opacity: 1;
+        opacity: 0;
     }
     &:hover h2::after {
-        width: 100%;
+        width: 0%;
     }
     img {
         width: 100%;
@@ -30,19 +30,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
     transition: .5s;
     h2 {
         color: yellow;
         &::after {
             content: '';
             display: block;
-            width: 0;
+            width: 100%;
             height: 2px;
             margin: 10px 0;
             background-color: #ff0;
             transition: .5s .2s;   
         }
+    }
+    h3 {
+        color: white;
     }
     p {
         color: white;
@@ -56,6 +59,16 @@
     .item {
         img {
             width: 100%;
+        }
+    }
+    .txt {
+        padding: 40px;
+        h2, h3 {
+            font-size: 16px;
+            margin-bottom: -10px;
+        }
+        p {
+            font-size: 13px;
         }
     }
 }

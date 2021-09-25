@@ -1,3 +1,7 @@
+$bgBlue: #415165;
+$colorRed: #A00404;
+$colorBlue: rgb(8, 63, 130);
+$colorGray: rgb(167, 168, 169);
 * {
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -52,12 +56,14 @@
         box-sizing: border-box; /* 可不用算padding */
     }
 }
-.infoBody {
-    padding: 3px;
-    margin: 0;
-}
+// .infoBody {
+//     padding: 3px;
+//     margin: 0;
+//     width: 80%;
+// }
 ul li {
     margin-bottom: 8px;
+    font-size: 18px;
 }
 .container {
     max-width: 1440px;
@@ -65,14 +71,45 @@ ul li {
     padding-right: 50px;
     padding-left: 50px;
 }
+.title {
+    margin: 20px 0;
+}
+.skillTree {
+    display: flex;
+    margin: 20px 0px;
+    img {
+        width: 17%;
+    }
+    ul {
+        width: 33%;
+        li {
+            list-style-type: none;  
+            padding: 10px 0px;
+        }
+    }
+}
+.skillSpan {
+    padding: 0px 20px;
+    line-height: 50px;
+}
+.profile {
+    font-size: 20px;
+    padding-left: 0px;
+}
 .profileImg {
     border-radius: 20%;
 }
 .colorRed {
-    color: #A00404;
+    color: $colorRed;
+}
+.colorBlue {
+    color: $colorBlue;
+}
+.colorGray {
+    color: $colorGray;
 }
 .bgBlue {
-    background: #415165;
+    background: $bgBlue;
 }
 .bold {
     font-weight: 500;
@@ -81,23 +118,14 @@ ul li {
     display: flex;
 }
 .infoHeader {
-    width: 100%;
-    padding: 40px;
+    // width: 100%;
+    padding: 17px 40px;
 }
 .fontSize3 {
     font-size: 27px;
 }
 .fontSize2 {
     font-size: 18px;
-}
-.skillContent {
-    display: flex;
-}
-.skills {
-    width: 50%;
-    ul li {
-        list-style-type: circle;
-    }
 }
 .body {
     li {
@@ -125,6 +153,24 @@ ul li {
     margin-bottom: 0;
     color: white;
 }
+.inLine {
+    display: inline;
+}
+.subProfile {
+    display: flex;
+    color: $colorGray;
+    padding-left: 0px;
+    li {
+        margin-right: 5px;
+    }
+}
+.experience {
+    color: $colorGray;
+    li {
+        list-style-type: circle;
+    }
+}
+
 
 
 @media (max-width: 767px) {
@@ -145,6 +191,16 @@ ul li {
             width: 100%;
         }
     }   
+    .skillTree {
+        flex-wrap: wrap;
+        ul {
+            width: 50%;
+        }
+    }
+    .skillSpan {
+        padding: 0px 10px;
+        line-height: 0;
+    }
     .infoHeader {
         padding: 0;
         padding-top: 25px;
@@ -152,13 +208,17 @@ ul li {
     .colorRed {
         display: none;
     }
-    .skillContent {
-        flex-wrap: wrap;
-    }
-    .skills {
-        width: 100%;
-    }
     .center {
         padding: 18px;
+    }
+    .profile {
+        li {
+            font-size: 16px;
+        }
+    }
+    .subProfile {
+        li {
+            font-size: 14px;
+        }
     }
 }

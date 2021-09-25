@@ -10,12 +10,22 @@ const About = () => {
                         <img className={ styles.profileImg } src="../src/images/ivan.jpg" width="250px" height="250px"></img>
                     </div>
                     <div className={ styles.infoHeader }>
-                        <h2>個人資料 <span className={ styles.colorRed }> PROFILE </span></h2>
-                        <hr/>
-                        <ul className={ styles.infoBody }>
-                            <li className={ styles.fontSize3 }>蘇宥橙 IvanSu</li>
-                            <li>秉持著積極學習和負責的態度完成每件事，勇於挑戰新技術，享受解決問題帶來的成就感，並相信每段經驗，都會是灌溉未來的養分。</li>
-                            <li className={ styles.fontSize2 }>前端工程師 <span>Front-End Developer</span></li>
+                        <h2>蘇宥橙 IvanSu</h2>    
+                        <ul className={ styles.profile }>
+                            <li><b>美商塗鴉科技公司<span className={ styles.colorGray }> | </span>前端工程師 <span className={ styles.colorGray }> | </span>QA測試工程師</b></li>
+                            <li><b>龍華科技大學 <span className={ styles.colorGray }> | </span> 電機工程系 大學畢業</b></li>
+                            <ul className={ styles.subProfile }>
+                                <li>新北市中和區</li>
+                                <li>| 3-4年工作經驗</li>
+                                <li>| 希望職稱: 前端工程師</li>
+                            </ul>
+                            <ul className={ styles.experience }>
+                                <li>2 years + Frontend Developer</li>
+                                <li>協助開發範本功能，使用前端主流生態 React 與 Redux</li>
+                                <li>協助埋入 google Analytics Code 追蹤使用者習慣 </li>
+                                <li>分析客服問題，討論並將問題整理完後提出解決方案建議優化</li>
+                                <li>產品開發上與 UI 設計師討論並完成，聽取使用者回饋進行改善</li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
@@ -24,33 +34,58 @@ const About = () => {
                         <h2>技能 <span className={ styles.colorRed }>SKILLS</span></h2>
                         <hr/>
                         <div className={ styles.skillContent }>
-                            <div className={ styles.skills}>
-                                <h3>Front-End</h3>
+                            <h3 className={ styles.colorBlue }>Web Development</h3>
+                            <div className={ styles.skillTree }>
                                 <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>BootStrap5</li>
-                                    <li>JavaScript</li>
-                                    <li>React.js (React hook) / Redux</li>
-                                    <li>webpack</li>
-                                    <li>Git</li>
-                                    <li>postMan</li>
+                                    <li>
+                                        <img src="../src/images/html5.png" alt="html"></img><span className={ styles.skillSpan }>HTML5</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/bootstrap.png" alt="html"></img><span className={ styles.skillSpan }>Bootstrap</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/js.png" alt="html"></img><span className={ styles.skillSpan }>JavaScript</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/scss.png" alt="html"></img><span className={ styles.skillSpan }>Scss</span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img src="../src/images/react.png" alt="html"></img><span className={ styles.skillSpan }>React</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/redux.png" alt="html"></img><span className={ styles.skillSpan }>Redux</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/css.png" alt="html"></img><span className={ styles.skillSpan }>Css in JS</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/webpack.png" alt="html"></img><span className={ styles.skillSpan }>Webpack</span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img src="../src/images/github.png" alt="html"></img><span className={ styles.skillSpan }>GitHub</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/git.png" alt="html"></img><span className={ styles.skillSpan }>Git</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/postMan.png" alt="html"></img><span className={ styles.skillSpan }>postMan</span>
+                                    </li>
+                                    <li>
+                                        <img src="../src/images/jira.jpeg" alt="html"></img><span className={ styles.skillSpan }>Jira</span>
+                                    </li>
                                 </ul>
                             </div>
-                            <div className={ styles.skills}>
-                                <h3>Back-End</h3>
-                                <ul>
-                                    <li>Node.js</li>
-                                    <li>Mysql</li>
-                                    <li>php(Laravel)</li>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                     <div className={ styles.noPadding }>
                         <h2>工作經驗 <span className={ styles.colorRed }>WORK EXPERIENCE</span></h2>
                         <hr/>
-                        <p className={ styles.bold }> 美商塗鴉科技公司(pro360達人網)，前端工程師，2017 年 9 月 - 至今</p>
+                        <p className={ styles.bold }>前端工程師 - 美商塗鴉科技公司(pro360達人網)，2017 年 9 月 - 至今</p>
                         <p>負責專案開發及內部系統測試，開發流程優化，控管 Web / Android / iOS 三大平台功能。</p>
                         <p className={ styles.bold }>職責內容：</p>
                         <ul>
@@ -65,8 +100,11 @@ const About = () => {
                         </ul>
                         <p className={ styles.bold }>主要成就：</p>
                         <ul>
-                            <li>規劃系統測試與需求流程體驗，每週減少逾七成的客服問題回報。</li>
-                            <li>與產品和行銷部門協作，針對用戶需求改善網頁功能，大幅改善使用者體驗，並成功提升月營收近一倍以上。</li>
+                            <li>規劃系統測試與需求流程體驗，每週減少逾 <b>70%</b> 的客服問題回報。</li>
+                            <li>與後端工程師共同開發範本功能，讓使用者使用體驗更加流暢。</li>
+                            <li>翻譯網站語言進軍香港市場，替公司拿下香港市場。</li>
+                            <li>重新美化 Email 排版，收到使用者回應對於開啟信件變成期待的事情。</li>
+                            <li>與產品和行銷部門協作，針對用戶需求改善網頁功能，大幅改善使用者體驗，並成功提升月營收近 <b>2</b> 倍以上。</li>
                         </ul>
                     </div>
                     <div className={ styles.title }>
@@ -74,8 +112,7 @@ const About = () => {
                         <hr/>
                         <ul className={ `${ styles.contact } ${ styles.infoBody }` }>
                             <li>Email: persist1189@gmail.com</li>
-                            <li>Phone: 0908-020-100</li>
-                            <li>作品連結: <a href="https://persist1189.github.io/practice/ReactToDoList/dist/index.html#/about" target="_blank"> Click me</a> </li>
+                            <li>Phone: 0908-020-110</li>
                         </ul>
                     </div>
                 </div>

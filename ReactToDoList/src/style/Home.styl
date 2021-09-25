@@ -159,6 +159,9 @@
 }
 .lecturerItem:hover .lecturerSpeak{
     opacity: 1;
+    img {
+        max-width: none;
+    }
 }
 .lecturerSpeakSection {
     position: absolute;    
@@ -187,6 +190,13 @@
     display: flex;    
     justify-content: center;
 }
+.banner {
+    display: flex;
+    justify-content: center;    
+}
+.banner img {
+    width: 80%;
+}
 
 @media (max-width: 767px){
     .easyContainer {
@@ -200,7 +210,7 @@
         padding-top: 0px;
     }
     .easyItem {
-        padding: 10px;
+        // padding: 10px;
     }
     .hardContainer {
         flex-wrap: wrap;
@@ -244,13 +254,16 @@
     }
     .lecturerSpeakSection {
         top: 0;
-        left: -33px;
+        left: -33%;
     }
     .lecturerSpeakRightSection {
         top: 0;
-        left: -25px;
+        left: -25%;
     }
     .GameTeamMember {
         flex-wrap: wrap;
+    }
+    .easyFont {
+        font-size: 25px;
     }
 }

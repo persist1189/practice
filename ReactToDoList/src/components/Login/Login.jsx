@@ -37,6 +37,8 @@ const Login = (props) => {
     })
 
     const responseGoogle = (res) => {
+        const { showError } = props;
+        showError(null);
         let data = res && res.profileObj;
         if (!data) return false;
         setState(prev => ({
@@ -63,27 +65,36 @@ const Login = (props) => {
     //     inputRef.current.focus();
     // },[])
 
+    // 實作點擊 Login 後跳出失敗畫面
     const handleSubmitClick = (e) => {
         e.preventDefault();
-        console.log('handleSubmitClick');
-        const payload = { "email" : state.email, "password" : state.password }
-        axios.post("localhost:4000/user/login", payload)
-            .then(function(response){
-                if(response.status === 200){
-                    setState(prevState => ({ ...prevState, "successMessage" : "Login successful.Redirecting to home page..."}))
-                    localStorage.setItem(ACCESS_TOKEN_NAME, response.data.token);
-                    redirectToHome();
-                    showError(null)
-                } else if (response.code == 204) {
-                    showError("Username and password do not match");
-                } else {
-                    showError("Username does not exists");
-                }
-            })
-            .catch(function(error){
-                console.log(error)
-            })
+        const { showError } = props;
+        // showError 必須先從 ToDo.jsx 先傳值過去才能使用
+        showError("您尚未註冊，若有問題請聯繫管理者。")    
     }
+
+    // 尚未完成，看起來當初是想要寫後台串接後判斷資料。
+    // const handleSubmitClick = (e) => {
+    //     e.preventDefault();
+    //     console.log('handleSubmitClick');
+    //     const payload = { "email" : state.email, "password" : state.password }
+    //     axios.post("localhost:4000/user/login", payload)
+    //         .then(function(response){
+    //             if(response.status === 200){
+    //                 setState(prevState => ({ ...prevState, "successMessage" : "Login successful.Redirecting to home page..."}))
+    //                 localStorage.setItem(ACCESS_TOKEN_NAME, response.data.token);
+    //                 redirectToHome();
+    //                 showError(null)
+    //             } else if (response.code == 204) {
+    //                 showError("Username and password do not match");
+    //             } else {
+    //                 showError("Username does not exists");
+    //             }
+    //         })
+    //         .catch(function(error){
+    //             console.log(error)
+    //         })
+    // }
 
     let history = useHistory()
 
@@ -114,9 +125,9 @@ const Login = (props) => {
                 <div className={ styles.margin } >
                     <InputBtn name="Login" disabled={ isDisabledBtn() } onClick={ handleSubmitClick } />
                 </div>
-                <div className={ styles.margin } >
+                {/* <div className={ styles.margin } >
                     <InputBtn name="Register Page" onClick={ toRegisterBtn } />
-                </div>
+                </div> */}
             </div>
         )
     } else {

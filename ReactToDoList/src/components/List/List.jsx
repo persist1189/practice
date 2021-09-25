@@ -70,15 +70,16 @@ class ConnectList extends React.Component{
                     <input type="text" className={ styles.taskTitle +
                             (this.state.important == "Y" ? " " + styles.important : " ") +
                             (this.state.complete ? " complete": " ")}
-                           value={this.props.listData.name}/>
+                        value={this.props.listData.name}/>
 
                     <i className={ styles + this.state.important == "Y" ?
                         "fas fa-star fa-lg" + styles.icon + " " + styles.iconImportant:
                         "far fa-star fa-lg" + styles.icon }
-                       onClick={this._changeState.bind(this,"important")}></i>
+                    onClick={this._changeState.bind(this,"important")}></i>
 
-                    {/*<i className="fas fa-pen fa-lg icon"></i>*/}
                     <i className={"fas fa-pen fa-lg" + styles.icon} ></i>
+                    
+
                     <div className={ styles.listIcon }>
                         {this.props.listData.date != ''?
                             <i className={`fa fa-calendar-alt ${ styles.icon } ${ styles.marginRight1 }`}></i>: " "}

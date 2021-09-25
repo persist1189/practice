@@ -28,17 +28,19 @@ const ProductList = () => {
                             <img src="../src/images/fundraising.jpg" alt="fundraising"></img>
                             <div className={ styles.txt }>
                                 <h2>募款平台：拍出會動的照片</h2>
-                                <p>使用 bootstrap5 + 內建 bootstrap5 javascript 功能。</p>
+                                <p>使用 BootStrap5 為基底，並搭配 Scss 編寫樣式，Webpack 作為模組化打包工具，Git 紀錄程式碼</p>
+                                <h3> Bootstrap5 | JS | RWD | Scss | Git |Webpack </h3>
                             </div>
                         </div>    
                     </a>
 
                     <div onClick={ toToDoList }>
                         <div className={ styles.item }>
-                        <img src="../src/images/cutView.png" alt="toDoList"></img>
+                        <img src="../src/images/toDoList.png" alt="toDoList"></img>
                             <div className={ styles.txt }>
-                                <h2>ToDoList</h2>
-                                <p>使用route / redux / </p>
+                                <h2>待辦事項</h2>
+                                <p>將 React 與 Redux 結合使用 styled-components 編寫樣式，Webpack 作為模組化打包工具，Git 紀錄程式碼</p>
+                                <h3> React | Redux | JS | styled-component | RWD | Webpack | Git </h3>
                             </div>
                         </div>
                     </div>
@@ -47,8 +49,9 @@ const ProductList = () => {
                         <div className={ styles.item }>
                         <img src="../src/images/cutView.png" alt="grid"></img>
                             <div className={ styles.txt }>
-                                <h2>根據六角學院的版型來練習</h2>
-                                <p>使用 javascript 操控元素 / flex 排版</p>
+                                <h2>切版練習</h2>
+                                <p>使用 JS 抓取屬性位置，並搭配 Scss 編寫樣式，Webpack 作為模組化打包工具，Git 紀錄程式碼</p>
+                                <h3> Bootstrap5 | JS | Scss | RWD | Git | Webpack </h3>
                             </div>
                         </div>
                     </div>
@@ -57,8 +60,9 @@ const ProductList = () => {
                         <div className={ styles.item }>
                             <img src="../src/images/blog.jpg" alt="blog"></img>
                             <div className={ styles.txt }>
-                                <h2>blog 排版</h2>
-                                <p>使用 bootstrap5 功能。</p>
+                                <h2>切版練習 (blog)</h2>
+                                <p>使用 BootStrap5 為基底，並搭配 Scss 編寫樣式，Webpack 作為模組化打包工具，Git 紀錄程式碼</p>
+                                <h3> Bootstrap5 | Scss| RWD | Git | Webpack </h3>
                             </div>
                         </div>
                     </a>   
@@ -67,8 +71,9 @@ const ProductList = () => {
                         <div className={ styles.item }>
                             <img src="../src/images/grid.jpg" alt="grid"></img>
                             <div className={ styles.txt }>
-                                <h2>grid 排版</h2>
-                                <p>使用 bootstrap5 功能。</p>
+                                <h2>切版練習 (grid)</h2>
+                                <p>使用 BootStrap5 為基底，並搭配 Scss 編寫樣式，Webpack 作為模組化打包工具，Git 紀錄程式碼</p>
+                                <h3> Bootstrap5 | Scss| RWD | Git | Webpack </h3>
                             </div>
                         </div>                    
                     </a>
@@ -77,8 +82,9 @@ const ProductList = () => {
                         <div className={ styles.item }>
                             <img src="../src/images/album.jpg" alt="grid"></img>
                             <div className={ styles.txt }>
-                                <h2>album 排版</h2>
-                                <p>使用 bootstrap5 功能。</p>
+                                <h2>切版練習 (album)</h2>
+                                <p>使用 BootStrap5 為基底，並搭配 Scss 編寫樣式，Webpack 作為模組化打包工具，Git 紀錄程式碼</p>
+                                <h3> Bootstrap5 | Scss| RWD | Git | Webpack </h3>
                             </div>
                         </div>
                     </a>

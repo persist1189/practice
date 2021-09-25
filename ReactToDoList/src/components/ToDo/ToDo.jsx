@@ -26,7 +26,9 @@ const ToDo = () => {
                 <Route exact path="/inProgress" component={InProgress} />
                 <Route exact path="/completed" component={Completed} />
             </div>
-            <Route exact path="/login" component={ Login }/>
+            <Route exact path="/login" component={ Login }>
+                <Login showError={ updateErrorMessage } />
+            </Route>
             <Route exact path="/about" component={ About }/>
             <Route exact path="/productList" component={ ProductList }/>
             <Route exact path="/ToolsPractice" component={ ToolsPractice } />

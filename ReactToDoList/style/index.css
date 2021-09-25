@@ -119,8 +119,8 @@ body {
 }
 
 .cancelButton {
-  background: #fffffd;
-  color: #D0021B;
+  background: #D0021B;
+  color: #fffffd;
 }
 
 #addTask {
@@ -199,5 +199,45 @@ body {
 
 .marginRight1 {
   margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  #topBlock {
+    height: auto;
+  }
+  #addTask {
+    width: 300px;
+  }
+  .inputTasksForm {
+    width: 300px;
+  }
+  .taskChk {
+    margin-left: 0px;
+    margin-right: 4px;
+  }
+  .inputName {
+    padding: 20px;
+  }
+  .inputForm {
+    padding-left: 20px;
+  }
+  .commitSize {
+    width: 90%;
+    height: 100px;
+  }
+  .reverseBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .taskTitle {
+    width: 55%;
+  }
+  .list {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

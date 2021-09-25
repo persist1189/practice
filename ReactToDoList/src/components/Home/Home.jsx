@@ -7,7 +7,7 @@ const Bootstrap = () => {
             <div class="row">
                 <div class="col">
                     <div className={ styles.item}>
-                        <img class="w-100" src="https://picsum.photos/350/250?random=2" alt="pic"></img>
+                        <img src="https://picsum.photos/350/250?random=2" alt="pic"></img>
                         <p>https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2https://picsum.photos/350/250?random=2</p>
                     </div>
                 </div>
@@ -254,7 +254,6 @@ const Home = () => {
     return (
         <div className={ styles.paddingTop }>
             <div className={ styles.main }>
-                <Banner/>
                 <ThinkCssIsEasyToLearn/>
                 <CssHardRefined/>
                 <LearningIsNotAPerson h2="學習不是一個人的事情" h2Br="你需要找人來幫你" p="雖說網路上有眾多的資源、眾多的教學，但這些內容多到眼花撩亂且品質參疵不齊難以整合，本課程將帶你打通 JavaScript 拆解、Vue 實戰運用、怎麼做都不難看的版型技巧！"/>
