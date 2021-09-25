@@ -72,7 +72,7 @@ const About = () => {
                                         <img src="../src/images/git.png" alt="html"></img><span className={ styles.skillSpan }>Git</span>
                                     </li>
                                     <li>
-                                        <img src="../src/images/postMan.png" alt="html"></img><span className={ styles.skillSpan }>postMan</span>
+                                        <img src="../src/images/postman.png" alt="html"></img><span className={ styles.skillSpan }>postMan</span>
                                     </li>
                                     <li>
                                         <img src="../src/images/jira.jpeg" alt="html"></img><span className={ styles.skillSpan }>Jira</span>
