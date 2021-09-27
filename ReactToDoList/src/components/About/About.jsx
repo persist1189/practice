@@ -71,6 +71,14 @@ const About = () => {
                                     <li>
                                         <img src="../src/images/git.png" alt="html"></img><span className={ styles.skillSpan }>Git</span>
                                     </li>
+                                    <li className={ styles.mobileNone }>
+                                        <img src="../src/images/postman.png" alt="html"></img><span className={ styles.skillSpan }>postMan</span>
+                                    </li>
+                                    <li className={ styles.mobileNone }>
+                                        <img src="../src/images/jira.jpeg" alt="html"></img><span className={ styles.skillSpan }>Jira</span>
+                                    </li>
+                                </ul>
+                                <ul className={ `${ styles.desktopNone } ${ styles.mobileShow }` }>
                                     <li>
                                         <img src="../src/images/postman.png" alt="html"></img><span className={ styles.skillSpan }>postMan</span>
                                     </li>
@@ -78,6 +86,7 @@ const About = () => {
                                         <img src="../src/images/jira.jpeg" alt="html"></img><span className={ styles.skillSpan }>Jira</span>
                                     </li>
                                 </ul>
+                                
                             </div>
                             
                         </div>

@@ -118,7 +118,6 @@ ul li {
     display: flex;
 }
 .infoHeader {
-    // width: 100%;
     padding: 17px 40px;
 }
 .fontSize3 {
@@ -170,6 +169,9 @@ ul li {
         list-style-type: circle;
     }
 }
+.desktopNone {
+    display: none;
+}
 
 
 
@@ -219,6 +221,17 @@ ul li {
     .subProfile {
         li {
             font-size: 14px;
+        }
+    }
+    .mobileShow {
+        display: block;
+    }
+    .mobileNone {
+        display: none;
+    }
+    .skillTree {
+        ul {
+            margin-bottom: 0;
         }
     }
 }
