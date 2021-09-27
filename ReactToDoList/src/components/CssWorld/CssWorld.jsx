@@ -9,6 +9,12 @@ import ToggleSelector from '../../components/ToggleSelector'
 // FoldableContent
 import FoldableContent from '../../components/FoldableContent';
 
+const ShakeCss = () => {
+    return (
+        <img src="../src/images/git.png" alt="shakeImg" width="50px" class="shake"></img>
+    )
+}
+
 const InputForms = (props) => {
     return (
         <div>
@@ -648,6 +654,7 @@ const CssWorld = () => {
     
     return (
         <div>
+        <ShakeCss/>
         <FoldableContent key="intro_profile" maxHeight="100px">
           <div>sasdasdasds</div>    
           <div>sasdasdasds</div>    
