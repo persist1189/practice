@@ -9,6 +9,17 @@ import ToggleSelector from '../../components/ToggleSelector'
 // FoldableContent
 import FoldableContent from '../../components/FoldableContent';
 
+const FrostedGlass = () => {
+    return (
+        <div className={ styles.fGBody }>
+            <div className={ styles.fGContainer }>
+                <div className={ `${ styles.fGNavBar } ${ styles.fGBackDropBlur }` }>這是導覽列</div>
+                <div className={ `${ styles.fGCard } ${ styles.fGBackDropBlur }` }>毛玻璃特效</div>
+            </div>
+        </div>
+    )
+}
+
 const GetDaxWithAxios = () => {
 
     let url = "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$format=JSON";
@@ -546,9 +557,6 @@ const City = () => {
 
 }
 
-
-
-
 const CssWorld = () => {
      
     const [state, setState] = useState(1);
@@ -669,106 +677,113 @@ const CssWorld = () => {
             }
         }
     }
-    
+
     return (
         <div>
-        <GetDaxWithAxios/>
-        <ShakeCss/>
-        <FoldableContent key="intro_profile" maxHeight="100px">
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-          <div>sasdasdasds</div>    
-        </FoldableContent>
-        <ToggleSelector/>
-        <TestUseState/>
-        <City/>
-        {/* 閃爍 html  */}
-        {/* <div className={ styles.centered }>
-        <h1 className={ styles.neonEffect }>I love NEON</h1>
-        <h1 className={ styles.neonEffect }>NEON effect is</h1>
-        <h1 className={ styles.neonEffect}>Awesome</h1>
-        </div> */}
-
-        {/* input*/}
-        <InputForms value={ value.name } onChange={ handleChange }/>
-        
-        {/* button */}
-        <div className={ styles.button }>
-            <button type="button" onClick={ submit }>add name</button>
-        </div>
-
-        {/* edit */}
-
-        {/* list */}
-        { lists }
-        {/* <div className={ styles.getData }>
-            { getOrderData.map((item, index) => (
-                <div key={ index } onClick={ edit }>{ item.name }</div>
-            )) }
-        </div> */}
-        
-        <hr/>
-            <div className={ styles.container }>
-                <div className="jump" className={ styles.jump }>
-                    <a onClick={ () => {
-                        scrollToAnchor('tabBlock');
-                    }}>ScrollDown</a>
-                </div>
-                
-                <div className= { styles.getData }>
-                    <button onClick={ () => { getData() }}>GETDATA</button>
-                </div>
-                <div className= { styles.mainTitle }>
-                    <h5>{ data.mainTitle }</h5>
-                </div>
-                <section>
-                    <div className={ styles.subTitle }>
-                        <h5>{ data.subTitle.title }</h5>
-                        <p>{ data.subTitle.subTitle }</p>
-                    </div>
-                    <div className={ styles.wrap }>
-                        <div className={ styles.item }>
-                            <h3>{ data.itmeContent.first.title }</h3>
-                            <img src={ data.itmeContent.first.img }/>
-                            <p>{ data.itmeContent.first.content }</p>
-                        </div>
-                        <div className={ styles.item }>
-                            <h3>{ data.itmeContent.second.title }</h3>
-                            <img src={ data.itmeContent.second.img }/>
-                            <p>{ data.itmeContent.second.content }</p>
-                        </div>
-                        <div className={ styles.item }>
-                            <h3>{ data.itmeContent.third.title }</h3>
-                            <img src={ data.itmeContent.third.img }/>
-                            <p>{ data.itmeContent.third.content }</p>
-                        </div>
-                    </div>
-                </section>
-                {/* product */}
-                <div className={ styles.tabBlock }>
-                        <div className={ styles.tab }>
-                            <div className={ state == 1 ? styles.active : '' } onClick={ () => { setState(1) } }>{ data.productContent.first }</div>
-                            <div className={ state == 2 ? styles.active : '' } onClick={ () => { setState(2) } }>{ data.productContent.second }</div>
-                            <div className={ state == 3 ? styles.active : '' } onClick={ () => { setState(3) }}>{ data.productContent.third }</div>
-                        </div>
-                        <div className={ styles.content }>
-                            { content }
-                        </div>
-                        <div id="tabBlock">
-                            Hello
-                        </div>
-                </div>
-            </div>
+            <FrostedGlass/>
         </div>
     )
+    
+    // return (
+    //     <div>
+    //     {/* <FrostedGlass/> */}
+    //     {/* <GetDaxWithAxios/>
+    //     <ShakeCss/>
+    //     <FoldableContent key="intro_profile" maxHeight="100px">
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //       <div>sasdasdasds</div>    
+    //     </FoldableContent>
+    //     <ToggleSelector/>
+    //     <TestUseState/>
+    //     <City/> */}
+    //     {/* 閃爍 html  */}
+    //     {/* <div className={ styles.centered }>
+    //     <h1 className={ styles.neonEffect }>I love NEON</h1>
+    //     <h1 className={ styles.neonEffect }>NEON effect is</h1>
+    //     <h1 className={ styles.neonEffect}>Awesome</h1>
+    //     </div> */}
+
+    //     {/* input*/}
+    //     <InputForms value={ value.name } onChange={ handleChange }/>
+        
+    //     {/* button */}
+    //     <div className={ styles.button }>
+    //         <button type="button" onClick={ submit }>add name</button>
+    //     </div>
+
+    //     {/* edit */}
+
+    //     {/* list */}
+    //     { lists }
+    //     {/* <div className={ styles.getData }>
+    //         { getOrderData.map((item, index) => (
+    //             <div key={ index } onClick={ edit }>{ item.name }</div>
+    //         )) }
+    //     </div> */}
+        
+    //     <hr/>
+    //         <div className={ styles.container }>
+    //             <div className="jump" className={ styles.jump }>
+    //                 <a onClick={ () => {
+    //                     scrollToAnchor('tabBlock');
+    //                 }}>ScrollDown</a>
+    //             </div>
+                
+    //             <div className= { styles.getData }>
+    //                 <button onClick={ () => { getData() }}>GETDATA</button>
+    //             </div>
+    //             <div className= { styles.mainTitle }>
+    //                 <h5>{ data.mainTitle }</h5>
+    //             </div>
+    //             <section>
+    //                 <div className={ styles.subTitle }>
+    //                     <h5>{ data.subTitle.title }</h5>
+    //                     <p>{ data.subTitle.subTitle }</p>
+    //                 </div>
+    //                 <div className={ styles.wrap }>
+    //                     <div className={ styles.item }>
+    //                         <h3>{ data.itmeContent.first.title }</h3>
+    //                         <img src={ data.itmeContent.first.img }/>
+    //                         <p>{ data.itmeContent.first.content }</p>
+    //                     </div>
+    //                     <div className={ styles.item }>
+    //                         <h3>{ data.itmeContent.second.title }</h3>
+    //                         <img src={ data.itmeContent.second.img }/>
+    //                         <p>{ data.itmeContent.second.content }</p>
+    //                     </div>
+    //                     <div className={ styles.item }>
+    //                         <h3>{ data.itmeContent.third.title }</h3>
+    //                         <img src={ data.itmeContent.third.img }/>
+    //                         <p>{ data.itmeContent.third.content }</p>
+    //                     </div>
+    //                 </div>
+    //             </section>
+    //             {/* product */}
+    //             <div className={ styles.tabBlock }>
+    //                     <div className={ styles.tab }>
+    //                         <div className={ state == 1 ? styles.active : '' } onClick={ () => { setState(1) } }>{ data.productContent.first }</div>
+    //                         <div className={ state == 2 ? styles.active : '' } onClick={ () => { setState(2) } }>{ data.productContent.second }</div>
+    //                         <div className={ state == 3 ? styles.active : '' } onClick={ () => { setState(3) }}>{ data.productContent.third }</div>
+    //                     </div>
+    //                     <div className={ styles.content }>
+    //                         { content }
+    //                     </div>
+    //                     <div id="tabBlock">
+    //                         Hello
+    //                     </div>
+    //             </div>
+    //         </div>
+    //     </div>
+    // )
 }
 
 export default CssWorld;

@@ -114,3 +114,35 @@ section {
   100%{
   color:#232323;}
 }  
+
+//frostedGlass
+.fGBody {
+  height:  100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background-image: url(https://images.unsplash.com/photo-1632900200771-6e05b1cdfbfd?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=60); //w 1920 的數字可以調整
+  background-size: cover; // 恢復原本照片的大小
+  position: center center; //讓圖片置中
+  color: #fff;
+} 
+.fGNavBar {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.fGCard {
+  width: 600px;
+  height: 300px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fGBackDropBlur {
+  backdrop-filter: blur(20px);   // frosted數字越高越模糊
+}
