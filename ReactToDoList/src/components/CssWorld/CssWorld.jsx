@@ -9,6 +9,24 @@ import ToggleSelector from '../../components/ToggleSelector'
 // FoldableContent
 import FoldableContent from '../../components/FoldableContent';
 
+const GetDaxWithAxios = () => {
+
+    let url = "https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?$top=30&$format=JSON";
+    let name = "";
+    fetch(url).then((res) => res.json())
+              .then((data) => data.forEach((item) => {
+                  name += `${ item.Name } <br/>`
+                  document.querySelector('.container').innerHTML = `
+                    <div>
+                        <div>${name}</div>
+                    </div>
+                  `
+              }));
+    return (
+        <div class="container"></div>
+    )
+}
+
 const ShakeCss = () => {
     return (
         <img src="../src/images/git.png" alt="shakeImg" width="50px" class="shake"></img>
@@ -654,6 +672,7 @@ const CssWorld = () => {
     
     return (
         <div>
+        <GetDaxWithAxios/>
         <ShakeCss/>
         <FoldableContent key="intro_profile" maxHeight="100px">
           <div>sasdasdasds</div>    
