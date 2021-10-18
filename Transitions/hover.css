@@ -1,0 +1,30 @@
+.box {
+    background: #2db34a;
+    border-radius: 6px;
+    height: 95px;
+    width: 95px;
+}
+
+.boxTransition {
+    background: #2db34a;
+    border-radius: 6px;
+    height: 95px;
+    width: 95px;
+    transition: width 2s height 2s transform 2s
+}
+.boxTransition:hover {
+    background: #ff2956;
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+}
+
+.box:hover {
+    background: #ff2956;
+}
+.marginLeft {
+    margin-left: 15px;
+}
+.float {
+    float: left
+}
